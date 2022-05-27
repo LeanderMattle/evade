@@ -20,11 +20,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 1
+          fetch-depth: 0
           lfs: true
       - uses: actions/cache@v2
         with:
-          path: Library
+          path: Evade\Library
           key: Library-${{ matrix.targetPlatform }}
           restore-keys: Library-
       - uses: game-ci/unity-builder@v2
